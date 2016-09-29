@@ -13,7 +13,7 @@
         app:srcCompat="@drawable/logo"
         android:id="@+id/LogoView"
         android:background="@android:color/background_light"
-        android:contentDescription="@string/title_activity_splash_screen"
+        android:contentDescription="@string/app_name"
         android:adjustViewBounds="true"
         android:layout_width="324dp" />
 

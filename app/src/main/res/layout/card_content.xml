@@ -7,20 +7,148 @@
     <android.support.v7.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
         card_view:cardCornerRadius="4dp"
         card_view:elevation="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                card_view:srcCompat="@drawable/bg"
+                android:id="@+id/topImage"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/percentOff"
+                android:textStyle="bold"
+                android:text="10% Off on Dummy Text"
+                android:textSize="16dp"
+                android:layout_alignBottom="@+id/topImage"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/topImage" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/details"
+                android:text="Lorem ipsum prices | Ksh 4,500"
+                android:textSize="12dp"
+                android:layout_below="@+id/percentOff"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/time"
+                android:textStyle="bold"
+                android:textColor="@color/black_overlay"
+                android:text="31 Oct 2016"
+                android:textSize="12dp"
+                android:layout_below="@+id/details"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/timeIcon"
+                android:layout_toRightOf="@+id/time"
+                card_view:srcCompat="@android:drawable/ic_menu_today"
+                android:layout_below="@+id/details"
+                android:layout_alignBottom="@+id/time" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" T&amp;C | Locations"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/TC"
+                android:layout_marginRight="69dp"
+                android:layout_marginEnd="69dp"
+                android:layout_alignTop="@+id/time"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:textColor="@color/colorAccent"
+                android:textSize="20dp"
+                android:id="@+id/arrow"
+                android:layout_alignBaseline="@+id/TC"
+                android:layout_alignBottom="@+id/TC"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                android:layout_marginLeft="50px"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_overlay"
+                android:id="@+id/view"
+                android:layout_below="@+id/time"
+                android:layout_alignRight="@+id/arrow"
+                android:layout_alignEnd="@+id/arrow"
+                android:layout_marginTop="7dp" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick with"
+                android:textSize="13dp"
+                android:id="@+id/pick"
+                android:layout_below="@+id/view"
+                android:layout_alignLeft="@+id/time"
+                android:layout_alignStart="@+id/time" />
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+
+                android:textSize="13dp"
+                android:id="@+id/points"
+                android:layout_alignTop="@+id/pick"
+                android:layout_toRightOf="@+id/pick"
+                android:layout_toEndOf="@+id/pick" />
+
+            <Button
+                android:layout_margin="5dp"
+                android:textColor="#fff"
+                android:background="@color/colorAccent"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:text="PICK"
+                android:layout_below="@+id/view"
+                android:layout_alignRight="@+id/view"
+                android:layout_alignEnd="@+id/view"
+                android:id="@+id/button" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

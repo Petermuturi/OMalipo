@@ -40,8 +40,7 @@
                 android:textSize="16dp"
                 android:layout_alignBottom="@+id/topImage"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/topImage" />
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:layout_marginLeft="8dp"

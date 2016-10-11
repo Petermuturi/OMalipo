@@ -1,11 +1,15 @@
-package ke.co.omalipo.omalipo;
+package ke.co.omalipo.omalipo.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class PagerAdapter extends FragmentStatePagerAdapter{
-    public PagerAdapter(FragmentManager fm) {
+import ke.co.omalipo.omalipo.fragment_views.second_view_tabs.Details;
+import ke.co.omalipo.omalipo.fragment_views.second_view_tabs.History;
+
+
+public class Second_FragmentAdapter extends FragmentStatePagerAdapter{
+    public Second_FragmentAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -15,13 +19,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
         Fragment frag=null;
         switch (position){
             case 0:
-                frag=new FirstView();
+                frag=new Details();
                 break;
             case 1:
-                frag=new SecondView();
-                break;
-            case 2:
-                frag=new ThirdView();
+                frag=new History();
                 break;
         }
         return frag;
@@ -37,13 +38,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter{
         String title=" ";
         switch (position){
             case 0:
-                title="First";
+                title="Details";
                 break;
             case 1:
-                title="Second";
-                break;
-            case 2:
-                title="Third";
+                title="History";
                 break;
         }
 

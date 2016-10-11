@@ -1,4 +1,4 @@
-package ke.co.omalipo.omalipo;
+package ke.co.omalipo.omalipo.fragment_views;
 
 
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import ke.co.omalipo.omalipo.fragment_views.second_view_tabs.Details;
+import ke.co.omalipo.omalipo.fragment_views.second_view_tabs.History;
+import ke.co.omalipo.omalipo.R;
 
 
 public class SecondView extends Fragment {

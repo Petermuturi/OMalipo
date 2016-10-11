@@ -2,14 +2,14 @@ package ke.co.omalipo.omalipo;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
-import android.view.View.OnClickListener;
 
-import android.view.View;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ke.co.omalipo.omalipo.adapters.TabsAdapter;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager pager;
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         // Fragment manager to add fragment in viewpager we will pass object of Fragment manager to adpater class.
         FragmentManager manager=getSupportFragmentManager();
 
-        //object of PagerAdapter passing fragment manager object as a parameter of constructor of PagerAdapter class.
-        PagerAdapter adapter=new PagerAdapter(manager);
+        //object of TabsAdapter passing fragment manager object as a parameter of constructor of TabsAdapter class.
+        TabsAdapter adapter=new TabsAdapter(manager);
 
         //set Adapter to view pager
         pager.setAdapter(adapter);

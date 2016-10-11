@@ -1,4 +1,4 @@
-package ke.co.omalipo.omalipo;
+package ke.co.omalipo.omalipo.fragment_views;
 
 
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ke.co.omalipo.omalipo.R;
+import ke.co.omalipo.omalipo.adapters.CardAdapter;
 import ke.co.omalipo.omalipo.util.Constants;
 
 
@@ -38,7 +40,7 @@ public class FirstView extends Fragment {
         Constants.cardData.prices =  new String[]{"Designer item prices atrt from Ksh 1,550 Only", "Was Ksh 5,500 | Now Ksh 4,500", "Prices After Discount Start at Ksh 270", "Was Ksh 4,000 | Now Ksh 3,000", "Was Ksh 5,500 & 4,500 | Now Ksh 3,500" , "Prices After Discount Start at Ksh 200" , "Prices After Discount Start at Ksh 300"};
         Constants.cardData.points = new String[]{"200 Points", "1000 Points", "270 Points", "1000 Points", "1500 Points" , "100 Points" , "300 Points"};
 
-        MyAdapter myadapter = new MyAdapter(Constants.cardData);
+        CardAdapter myadapter = new CardAdapter(Constants.cardData);
         rv.setAdapter(myadapter);
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());

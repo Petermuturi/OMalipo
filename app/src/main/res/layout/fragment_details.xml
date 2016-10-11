@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ke.co.omalipo.omalipo.Details">
+    tools:context="ke.co.omalipo.omalipo.fragment_views.second_view_tabs.Details">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

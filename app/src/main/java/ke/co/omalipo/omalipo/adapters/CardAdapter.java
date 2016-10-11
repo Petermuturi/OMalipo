@@ -1,4 +1,4 @@
-package ke.co.omalipo.omalipo;
+package ke.co.omalipo.omalipo.adapters;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -7,9 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.classes.CardData;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
     private CardData mDataset;
 
     // Provide a reference to the views for each data item
@@ -31,14 +32,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(CardData myDataset) {
+    public CardAdapter(CardData myDataset) {
         mDataset = myDataset;
     };
 
     // Create new views (invoked by the layout manager)
     @Override
-    public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                     int viewType) {
+    public CardAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
+                                                       int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_content, parent, false);
@@ -49,9 +50,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.mPriceView.setText(mDataset.get(position)[0]);
+        holder.mPriceView.setText(mDataset.get(position)[2]);
         holder.mDetailsView.setText(mDataset.get(position)[1]);
-        holder.mPointsView.setText(mDataset.get(position)[2]);
+        holder.mPointsView.setText(mDataset.get(position)[0]);
     }
 
     @Override

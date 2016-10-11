@@ -7,27 +7,33 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import ke.co.omalipo.omalipo.classes.CardData;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private String[] mDataset;
+    private CardData mDataset;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public CardView mCardView;
-        public TextView mTextView;
+        public TextView mPriceView;
+        public TextView mDetailsView;
+        public TextView mPointsView;
         public MyViewHolder(View v) {
             super(v);
 
             mCardView = (CardView) v.findViewById(R.id.card_view);
-            mTextView = (TextView) v.findViewById(R.id.points);
+            mPriceView = (TextView) v.findViewById(R.id.percentOff);
+            mDetailsView = (TextView) v.findViewById(R.id.details);
+            mPointsView = (TextView) v.findViewById(R.id.points);
         }
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset) {
+    public MyAdapter(CardData myDataset) {
         mDataset = myDataset;
-    }
+    };
 
     // Create new views (invoked by the layout manager)
     @Override
@@ -43,11 +49,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.mTextView.setText(mDataset[position]);
+        holder.mPriceView.setText(mDataset.get(position)[0]);
+        holder.mDetailsView.setText(mDataset.get(position)[1]);
+        holder.mPointsView.setText(mDataset.get(position)[2]);
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.length();
     }
 }

@@ -30,9 +30,9 @@ public class FirstView extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_first_view, container, false);
 
-        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_1);
+        RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv_1);
         rv.setHasFixedSize(true);
-        MyAdapter adapter = new MyAdapter(new String[]{"test one", "test two", "test three", "test four", "test five" , "test six" , "test seven"});
+        MyAdapter adapter = new MyAdapter(new String[]{"200 Points", "100 Points", "700 Points", "500 Points", "1000 Points" , "100 Points" , "300 Points"});
         rv.setAdapter(adapter);
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());

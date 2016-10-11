@@ -1,5 +1,13 @@
 package ke.co.omalipo.omalipo;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
+import android.app.Activity;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
+import android.view.View;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
@@ -36,5 +44,11 @@ public class MainActivity extends AppCompatActivity {
         //Setting tabs from adpater
         tabLayout.setTabsFromPagerAdapter(adapter);
 
+
+        FloatingActionButton actionMenu = new FloatingActionButton(getBaseContext());
+
+        final FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.menu);
+        menuMultipleActions.addButton(actionMenu);
     }
+
 }

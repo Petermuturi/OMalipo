@@ -38,10 +38,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/info_bar"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1"
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_marginLeft="10dp"
+
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:id="@+id/timeIcon"
@@ -49,13 +53,53 @@
 
 
         <TextView
+            android:id="@+id/valid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/timeIcon"
             android:text="Valid till 31 Oct 2016"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
             />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_overlay"
+            android:id="@+id/view"
+            android:layout_below="@+id/valid"
+            android:margin="15dp"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/location_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="kafe afrikana bistro ltd"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_desc"
+            android:text="The Mall, Waiyaki Way, Ground Floor"
+            android:layout_marginBottom="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_overlay"
+            android:id="@+id/view2"
+            android:layout_below="@+id/valid"
+            android:margin="15dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

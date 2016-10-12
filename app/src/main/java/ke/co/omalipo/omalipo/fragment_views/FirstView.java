@@ -8,18 +8,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.adapters.CardAdapter;
 import ke.co.omalipo.omalipo.util.Constants;
 
 
-public class FirstView extends Fragment {
-
-
-    public FirstView() {
-        // Required empty public constructor
-    }
+public class FirstView extends Fragment implements View.OnClickListener{
 
 
     @Override
@@ -46,7 +43,13 @@ public class FirstView extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);
 
+
         return rootView;
     }
 
+
+    @Override
+    public void onClick(View v) {
+        
+    }
 }

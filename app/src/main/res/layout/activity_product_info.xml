@@ -70,7 +70,6 @@
             android:background="@color/light_overlay"
             android:id="@+id/view"
             android:layout_below="@+id/valid"
-            android:margin="15dp"
             />
 
         <TextView
@@ -80,7 +79,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="true"
             android:text="kafe afrikana bistro ltd"
-            android:textSize="15dp"/>
+            android:textSize="20dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -95,11 +94,55 @@
             android:background="@color/light_overlay"
             android:id="@+id/view2"
             android:layout_below="@+id/valid"
-            android:margin="15dp"
             />
 
         <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/terms"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Terms &amp; Conditions"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rule1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Vouchers are non-refundable and cannot be exchanged for cash"
+           />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rule2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. One voucher can be used only once"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rule3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. One voucher cannot be clubbed with another voucher's offer"
+           />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rule4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. This voucher is non-transferrable -- cannot be transferred to another person for use."
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rule5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Offer on voucher cannot be clubbed with any other offer running at the merchant outlet"
+            />
+
     </LinearLayout>
 </RelativeLayout>

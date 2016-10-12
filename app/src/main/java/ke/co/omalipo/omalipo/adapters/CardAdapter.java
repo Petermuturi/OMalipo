@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import ke.co.omalipo.omalipo.MainActivity;
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.classes.CardData;
+import ke.co.omalipo.omalipo.classes.ProductInfoActivity;
 import ke.co.omalipo.omalipo.fragment_views.SecondView;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
@@ -43,7 +43,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
                     product(v);
                 }
                 public void product(View v){
-                    Intent intent = new Intent(v.getContext(), SecondView.class);
+                    Intent intent = new Intent(v.getContext(), ProductInfoActivity.class);
                     activity.startActivity(intent);
                 }
             });

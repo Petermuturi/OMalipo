@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_product_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ke.co.omalipo.omalipo.classes.ProductInfoActivity">
+
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/ic_menu_close_clear_cancel"
+        android:elevation="0dp"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:text="10% Off on your Bill"
+        android:id="@+id/textView"
+        android:layout_marginRight="-65dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-35dp"/>
+
+</android.support.design.widget.AppBarLayout>
+    
+</RelativeLayout>

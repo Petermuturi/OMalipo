@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 
+import ke.co.omalipo.omalipo.classes.MainActivity;
+
 public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate (Bundle savedInstanceState) {

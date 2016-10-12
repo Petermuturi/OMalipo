@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pick with"
                 android:textSize="13dp"
-                android:id="@+id/pick"
+                android:id="@+id/point_text"
                 android:layout_below="@+id/view"
                 android:layout_alignLeft="@+id/time"
                 android:layout_alignStart="@+id/time" />
@@ -134,9 +134,9 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="13dp"
                 android:id="@+id/points"
-                android:layout_alignTop="@+id/pick"
-                android:layout_toRightOf="@+id/pick"
-                android:layout_toEndOf="@+id/pick" />
+                android:layout_alignTop="@+id/point_text"
+                android:layout_toRightOf="@+id/point_text"
+                android:layout_toEndOf="@+id/point_text" />
 
             <Button
                 android:layout_margin="5dp"
@@ -148,7 +148,7 @@
                 android:layout_below="@+id/view"
                 android:layout_alignRight="@+id/view"
                 android:layout_alignEnd="@+id/view"
-                android:id="@+id/button" />
+                android:id="@+id/pick_button" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

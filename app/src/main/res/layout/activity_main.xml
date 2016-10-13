@@ -38,34 +38,35 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        app:fab_labelsPosition="right">
 
-        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
-            <!--android:id="@+id/points"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--app:fabSize="mini"-->
-            <!--app:fab_colorNormal="@color/colorAccent"-->
-            <!--app:fab_icon="@drawable/icon"-->
-            <!--app:fab_title="Get Free Points"/>-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fabSize="mini"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_icon="@drawable/icon"
+            app:fab_title="Get Free Points"/>
 
-        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
-            <!--android:id="@+id/promo"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--app:fabSize="mini"-->
-            <!--app:fab_colorNormal="@color/colorAccent"-->
-            <!--app:fab_icon="@drawable/icon"-->
-            <!--app:fab_title="Promo Code"/>-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/promo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fabSize="mini"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_icon="@drawable/icon"
+            app:fab_title="Promo Code"/>
 
-        <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
-            <!--android:id="@+id/mobile"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--app:fabSize="mini"-->
-            <!--app:fab_colorNormal="@color/colorAccent"-->
-            <!--app:fab_icon="@drawable/icon"-->
-            <!--app:fab_title="Mobile Top-Up"/>-->
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fabSize="mini"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_icon="@drawable/icon"
+            app:fab_title="Mobile Top-Up"/>
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 

@@ -8,7 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
+import android.view.View;
+import android.view.View.OnClickListener;
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.adapters.TabsAdapter;
 
@@ -42,19 +43,19 @@ public class MainActivity extends AppCompatActivity {
         //Setting tabs from adpater
         tabLayout.setTabsFromPagerAdapter(adapter);
 
-//        final View actionPoints = findViewById(R.id.points);
-//        final View actionPromo = findViewById(R.id.promo);
-//        final View actionMobile = findViewById(R.id.mobile);
+        final View actionPoints = findViewById(R.id.points);
+        final View actionPromo = findViewById(R.id.promo);
+        final View actionMobile = findViewById(R.id.mobile);
 
         FloatingActionButton actionMenu = new FloatingActionButton(getBaseContext());
-//        actionMenu.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                actionPoints.setVisibility(actionPoints.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-//                actionPromo.setVisibility(actionPromo.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-//                actionMobile.setVisibility(actionMobile.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-//            }
-//        });
+        actionMenu.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                actionPoints.setVisibility(actionPoints.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+                actionPromo.setVisibility(actionPromo.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+                actionMobile.setVisibility(actionMobile.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+            }
+        });
 
         FloatingActionsMenu menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.menu);
         menuMultipleActions.addButton(actionMenu);

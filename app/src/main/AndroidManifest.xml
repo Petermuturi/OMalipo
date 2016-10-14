@@ -27,7 +27,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".classes.ProductInfoActivity"></activity>
+        <activity android:name=".classes.ProductInfoActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

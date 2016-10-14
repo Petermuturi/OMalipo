@@ -11,9 +11,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.List;
+
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.adapters.CardAdapter;
+import ke.co.omalipo.omalipo.classes.ApiConfig;
+import ke.co.omalipo.omalipo.classes.Deal;
 import ke.co.omalipo.omalipo.util.Constants;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class FirstView extends Fragment implements View.OnClickListener{
@@ -34,14 +41,31 @@ public class FirstView extends Fragment implements View.OnClickListener{
         pick_button.setOnClickListener(this);
 
 
-        RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv_1);
+        final RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv_1);
         rv.setHasFixedSize(true);
-        Constants.cardData.offPrice =new String[]{"10% Off on All Items", "Ksh 1,000 Off on Monthly Individual Gym Membership", "10% Off on All Food Bills", "Buy any Wedges for Ksh 3,000", "Buy any Heels for Ksh 3,500" , "10% on All Food Bills" , "20% Off on all Cakes"};
-        Constants.cardData.prices =  new String[]{"Designer item prices atrt from Ksh 1,550 Only", "Was Ksh 5,500 | Now Ksh 4,500", "Prices After Discount Start at Ksh 270", "Was Ksh 4,000 | Now Ksh 3,000", "Was Ksh 5,500 & 4,500 | Now Ksh 3,500" , "Prices After Discount Start at Ksh 200" , "Prices After Discount Start at Ksh 300"};
-        Constants.cardData.points = new String[]{"200 Points", "1000 Points", "270 Points", "1000 Points", "1500 Points" , "100 Points" , "300 Points"};
 
-        CardAdapter myadapter = new CardAdapter(Constants.cardData, getActivity());
-        rv.setAdapter(myadapter);
+        ApiConfig.getService().getDeals().enqueue(new Callback<List<Deal>>() {
+            @Override
+            public void onResponse(Call<List<Deal>> call, Response<List<Deal>> response) {
+
+                List<Deal> deals = response.body();
+                if(deals == null){
+                    Toast.makeText(getContext(), "Error occured", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    CardAdapter myadapter = new CardAdapter(deals, getActivity());
+                    rv.setAdapter(myadapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Deal>> call, Throwable t) {
+                Toast.makeText(getContext(), "Error occured", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
 
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(llm);

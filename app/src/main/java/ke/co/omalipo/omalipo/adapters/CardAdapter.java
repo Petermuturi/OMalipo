@@ -10,13 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.List;
+
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.classes.CardData;
+import ke.co.omalipo.omalipo.classes.Deal;
 import ke.co.omalipo.omalipo.classes.ProductInfoActivity;
 import ke.co.omalipo.omalipo.fragment_views.SecondView;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
-    private CardData mDataset;
+    private List<Deal> mDataset;
     private  Activity activity;
 
     // Provide a reference to the views for each data item
@@ -51,7 +54,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public CardAdapter(CardData myDataset, Activity activity) {
+    public CardAdapter(List<Deal> myDataset, Activity activity) {
         this.mDataset = myDataset;
         this.activity = activity;
     };
@@ -70,13 +73,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.mPriceView.setText(mDataset.get(position)[2]);
-        holder.mDetailsView.setText(mDataset.get(position)[1]);
-        holder.mPointsView.setText(mDataset.get(position)[0]);
+        Deal deal = mDataset.get(position);
+        holder.mPriceView.setText(deal.name);
+        holder.mDetailsView.setText(deal.description);
+        holder.mPointsView.setText(Double.toString(deal.discountPrice));
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length();
+        return mDataset.size();
     }
 }

@@ -13,7 +13,7 @@ import ke.co.omalipo.omalipo.fragment_views.second_view_tabs.History;
 import ke.co.omalipo.omalipo.R;
 
 
-public class SecondView extends Fragment {
+public class WalletFragment extends Fragment {
     private FragmentTabHost mTabHost;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

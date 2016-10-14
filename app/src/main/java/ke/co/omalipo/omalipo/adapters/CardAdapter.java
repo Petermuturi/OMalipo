@@ -13,10 +13,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import ke.co.omalipo.omalipo.R;
-import ke.co.omalipo.omalipo.classes.CardData;
 import ke.co.omalipo.omalipo.classes.Deal;
 import ke.co.omalipo.omalipo.classes.ProductInfoActivity;
-import ke.co.omalipo.omalipo.fragment_views.SecondView;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
     private List<Deal> mDataset;

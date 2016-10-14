@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import ke.co.omalipo.omalipo.fragment_views.FirstView;
-import ke.co.omalipo.omalipo.fragment_views.SecondView;
-import ke.co.omalipo.omalipo.fragment_views.ThirdView;
+import ke.co.omalipo.omalipo.fragment_views.DealsFragment;
+import ke.co.omalipo.omalipo.fragment_views.WalletFragment;
+import ke.co.omalipo.omalipo.fragment_views.SignUpFragment;
 
 public class TabsAdapter extends FragmentStatePagerAdapter{
     public TabsAdapter(FragmentManager fm) {
@@ -19,13 +19,13 @@ public class TabsAdapter extends FragmentStatePagerAdapter{
         Fragment frag=null;
         switch (position){
             case 0:
-                frag=new FirstView();
+                frag=new DealsFragment();
                 break;
             case 1:
-                frag=new SecondView();
+                frag=new WalletFragment();
                 break;
             case 2:
-                frag=new ThirdView();
+                frag=new SignUpFragment();
                 break;
         }
         return frag;

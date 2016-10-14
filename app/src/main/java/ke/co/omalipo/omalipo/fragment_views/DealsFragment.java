@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,15 +16,13 @@ import java.util.List;
 
 import ke.co.omalipo.omalipo.R;
 import ke.co.omalipo.omalipo.adapters.CardAdapter;
-import ke.co.omalipo.omalipo.classes.ApiConfig;
 import ke.co.omalipo.omalipo.classes.Deal;
-import ke.co.omalipo.omalipo.util.Constants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class FirstView extends Fragment implements View.OnClickListener{
+public class DealsFragment extends Fragment implements View.OnClickListener{
 
     Button pick_button;
     @Override
@@ -36,7 +35,7 @@ public class FirstView extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_first_view, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_deals, container, false);
         pick_button = (Button)rootView.findViewById(R.id.location);
         pick_button.setOnClickListener(this);
 
@@ -44,13 +43,14 @@ public class FirstView extends Fragment implements View.OnClickListener{
         final RecyclerView rv = (RecyclerView)rootView.findViewById(R.id.rv_1);
         rv.setHasFixedSize(true);
 
-        ApiConfig.getService().getDeals().enqueue(new Callback<List<Deal>>() {
+        Deal.get().enqueue(new Callback<List<Deal>>() {
             @Override
             public void onResponse(Call<List<Deal>> call, Response<List<Deal>> response) {
 
                 List<Deal> deals = response.body();
                 if(deals == null){
-                    Toast.makeText(getContext(), "Error occured", Toast.LENGTH_LONG).show();
+                    Log.e("OMALIPO", response.message());
+                    Toast.makeText(getActivity(), "Error occured", Toast.LENGTH_LONG).show();
                 }
                 else {
                     CardAdapter myadapter = new CardAdapter(deals, getActivity());
@@ -60,7 +60,8 @@ public class FirstView extends Fragment implements View.OnClickListener{
 
             @Override
             public void onFailure(Call<List<Deal>> call, Throwable t) {
-                Toast.makeText(getContext(), "Error occured", Toast.LENGTH_LONG).show();
+                Log.e("OMALIPO", t.getMessage());
+                Toast.makeText(getActivity(), "Error occured", Toast.LENGTH_LONG).show();
             }
         });
 

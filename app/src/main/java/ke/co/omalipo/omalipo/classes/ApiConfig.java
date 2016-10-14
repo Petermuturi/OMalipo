@@ -15,7 +15,7 @@ public class ApiConfig {
         if(service == null){
             // create instance
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://ba4ed4e5.ngrok.io/api/")
+                    .baseUrl("http://2c8fc684.ngrok.io/api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             service = retrofit.create(ApiService.class);
